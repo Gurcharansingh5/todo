@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>authentication system</title>
+</head>
+<body>
+<p>new user is{{user.username}}  </p>
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+enter your username :
+<input type="text" name="usernames">
+<br>
+         email : <input type="email" name="email">
+
+<br>
+enter your password :
+<input type="password" name="passwords">
+<br>
+<button type="submit">submit</button>
+    </form>
+</body>
+</html>

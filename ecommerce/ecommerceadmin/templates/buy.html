@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>buy</title>
+</head>
+<body>
+
+<img src="{{productid.productimage.url}}" height="200" width="200">
+{{productid.productname}}
+{{productid.productprice}}
+<form action="{% url 'purchase' id %}" method="post">
+    {% csrf_token %}
+    name : <input type="text" name="name" required>
+    phone : <input type="number" name="phone" required>
+    adress : <textarea name="address" required></textarea>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>
